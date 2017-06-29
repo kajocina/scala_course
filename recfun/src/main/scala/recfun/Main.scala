@@ -2,32 +2,58 @@ package recfun
 
 object Main {
   def main(args: Array[String]) {
-    println("Pascal's Triangle")
-    for (row <- 0 to 10) {
-      for (col <- 0 to row)
-        print(pascal(col, row) + " ")
-      println()
+//    println("Pascal's Triangle")
+//    for (row <- 0 to 10) {
+//      for (col <- 0 to row)
+//        print(pascal(col, row) + " ")
+//      println()
+//    }
+  }
+
+  /**
+    * Exercise 1
+    */
+  def pascal(c: Int, r: Int): Int = {
+    if (c == 0 || r == 0 || r == c) {
+      return 1
+    }
+    else {
+      pascal(c - 1, r - 1) + pascal(c, r - 1)
     }
   }
 
   /**
-   * Exercise 1
-   */
-    def pascal(c: Int, r: Int): Int = {
-      if (c == 0 || r == 0 || r == c) {return 1}
-      else {pascal(c-1,r-1) + pascal(c,r-1)}
+    * Exercise 2
+    */
+  def balance(chars: List[Char]): Boolean = {
+
+    def search(open: Int, rest: List[Char]): Int = {
+
+      if (rest.isEmpty) {
+        return open
+      }
+      if (rest.head == '(') {
+        return search(open+1,rest.tail)
+      }
+      if (rest.head == ')' && open == 0) {
+        return -1 // ugly hack
+      }
+      if (rest.head == ')') {
+        return search(open-1,rest.tail)
+      }
+      if (rest.head != ')' && rest.head != '('){
+        return search(open,rest.tail)
+      }
+
+      return open
     }
-  
-  /**
-   * Exercise 2
-   */
-    def balance(chars: List[Char]): Boolean = {
-      if (chars.IsEmpty) {return True}
-      // termination
-    }
-  
-  /**
-   * Exercise 3
-   */
-    def countChange(money: Int, coins: List[Int]): Int = ???
+
+    if (search(0, chars) == 0) {true}
+    else {false}
   }
+
+  /**
+    * Exercise 3
+    */
+  def countChange(money: Int, coins: List[Int]): Int = ???
+}
