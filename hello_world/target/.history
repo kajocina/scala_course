@@ -1,0 +1,6 @@
+util.Properties.versionString
+console
+compile
+/classes
+test
+run

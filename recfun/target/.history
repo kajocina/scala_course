@@ -1,0 +1,7 @@
+def
+def cx
+val x = List[Char]
+val x: List[Char]
+val x: List[Char] = List('a','b')
+console
+val x: List[Char] = List('a','b')
