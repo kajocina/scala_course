@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bb2545c-d313-4397-bb24-47fc04b3f073" name="Default" comment="" />
+    <list default="true" id="2bb2545c-d313-4397-bb24-47fc04b3f073" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lecture2/lecture2.sc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lecture2/rationals.sc" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/lecture2.sc" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterPath="$PROJECT_DIR$/../recfun/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterPath="$PROJECT_DIR$/../recfun/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="$PROJECT_DIR$/../recfun/project/target/streams/compile/copyResources/$global/streams/copy-resources" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/default/recfun-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/default/recfun-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/default/recfun-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/default/recfun-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-compile-internal.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-compile.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-docs.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-optional.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-plugin.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-pom.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-provided.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-runtime.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-scala-tool.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-sources.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-test-internal.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-test.xml" afterPath="$PROJECT_DIR$/../recfun/project/target/resolution-cache/reports/default-recfun-build-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/../recfun/project/target/streams/$global/update/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/target/.history" afterPath="$PROJECT_DIR$/../recfun/target/.history" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/target/streams/$global/submit/$global/streams/out" afterPath="$PROJECT_DIR$/../recfun/target/streams/$global/submit/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/../recfun/target/streams/compile/compileIncremental/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/target/streams/compile/packageSubmission/$global/streams/out" afterPath="$PROJECT_DIR$/../recfun/target/streams/compile/packageSubmission/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../recfun/target/streams/test/definedTests/$global/streams/out" afterPath="$PROJECT_DIR$/../recfun/target/streams/test/definedTests/$global/streams/out" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -21,11 +50,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lecture2.sc" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/lecture2.sc">
+      <file leaf-file-name="lecture2.sc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lecture2/lecture2.sc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="31" column="15" lean-forward="true" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+            <state relative-caret-position="100">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rationals.sc" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/lecture2/rationals.sc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -40,6 +79,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -51,15 +93,21 @@
         <option value="$PROJECT_DIR$/src/main/scala/main.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/x.sc" />
         <option value="$PROJECT_DIR$/src/main/scala/lecture2.sc" />
+        <option value="$PROJECT_DIR$/src/main/scala/lecture2_classes.sc" />
+        <option value="$PROJECT_DIR$/src/main/lecture2_classes.sc" />
+        <option value="$PROJECT_DIR$/src/main/scala/lecture2/lecture2_classes.sc" />
+        <option value="$PROJECT_DIR$/src/lecture2/lecture2.sc" />
+        <option value="$PROJECT_DIR$/src/lecture2/rationals.sc" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="18" />
-    <option name="width" value="1922" />
-    <option name="height" value="1092" />
+    <option name="x" value="1984" />
+    <option name="y" value="-11" />
+    <option name="width" value="1857" />
+    <option name="height" value="1212" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -75,8 +123,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -89,49 +138,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lecture2_ex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lecture2_ex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lecture2_ex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lecture2_ex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Scala Compiler" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../funsets" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lecture2" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/main/scala" />
+      <recent name="$PROJECT_DIR$/src/main/scala/lecture2" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -397,20 +419,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="18" width="1922" height="1092" extended-state="6" />
+    <frame x="1984" y="-11" width="1857" height="1212" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328792" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1671159" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -427,6 +449,9 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -438,7 +463,23 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/lecture2.sc">
+    <entry file="file://$PROJECT_DIR$/src/lecture2/lecture2.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lecture2/lecture2.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" column="15" lean-forward="true" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lecture2/lecture2.sc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -446,7 +487,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/lecture2.sc">
+    <entry file="file://$PROJECT_DIR$/src/lecture2/lecture2.sc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -454,7 +495,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/lecture2.sc">
+    <entry file="file://$PROJECT_DIR$/src/lecture2/lecture2.sc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
           <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
@@ -462,7 +503,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/lecture2.sc">
+    <entry file="file://$PROJECT_DIR$/src/lecture2/lecture2.sc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -487,10 +528,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/lecture2.sc">
+    <entry file="file://$PROJECT_DIR$/src/lecture2/lecture2.sc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="31" column="15" lean-forward="true" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+        <state relative-caret-position="100">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="234" column="18" lean-forward="false" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lecture2/rationals.sc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
