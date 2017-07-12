@@ -63,8 +63,7 @@ abstract class TweetSet {
     * Question: Should we implment this method here, or should it remain abstract
     * and be implemented in the subclasses?
     */
-  def descendingByRetweet: TweetList = ???
-
+  def descendingByRetweet: TweetList
   /**
     * The following methods are already implemented
     */
@@ -101,6 +100,8 @@ class Empty extends TweetSet {
   /**
     * Returns the tweet from this set which has the greatest retweet count.
     */
+  def descendingByRetweet: TweetList = throw new java.util.NoSuchElementException("empty set!")
+
   def mostRetweeted: Tweet = throw new java.util.NoSuchElementException("empty set!")
 
   def filter(p: Tweet => Boolean): TweetSet = filterAcc(p,new Empty())
@@ -130,33 +131,29 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
   /**
     * Returns the tweet from this set which has the greatest retweet count.
     */
-
-  def asSet(tweets: TweetSet): Set[Tweet] = {
-    var res = Set[Tweet]()
-    tweets.foreach(res += _)
-    res // REMOVE BEFORE SUBMITTING
+  def descendingByRetweet: TweetList = {
+    try {
+      new Cons(this.mostRetweeted,this.remove(this.mostRetweeted).descendingByRetweet)
+    } catch {case e: Exception => new Cons(elem,Nil)}
   }
 
   def mostRetweeted: Tweet = {
-
-    var observedMax: Int = 0
-    if (elem.retweets > observedMax) {(left union right).mostRetweeted}
-
+    try {
+      if (elem.retweets > (left union right).mostRetweeted.retweets) elem
+      else (left union right).mostRetweeted
+    } catch { case e: Exception => elem }
   }
 
   def filter(p: Tweet => Boolean): TweetSet = filterAcc(p,new Empty())
 
   def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet =
 
-    if (p(elem)) {
-      ((acc incl elem) union left.filter(p)) union right.filter(p)
-    }
-    else {
-      acc
-    }
+    if (p(elem)) ((acc incl elem) union left.filter(p)) union right.filter(p)
+    else acc
 
   def union(that: TweetSet): TweetSet = ((left union right) union that) incl elem
   def isEmpty: Boolean = false
+
   /**
     * The following methods are already implemented
     */
@@ -183,8 +180,6 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
     right.foreach(f)
   }
 }
-
-
 
 
 trait TweetList {
@@ -231,9 +226,9 @@ object GoogleVsApple {
 object Main extends App {
   val set1 = new Empty
   val set2 = set1.incl(new Tweet("a", "a body", 20))
-  val set3 = set2.incl(new Tweet("b", "b body", 22))
-  val c = new Tweet("c", "c body", 7)
-  val d = new Tweet("d", "d body", 25)
+  val set3 = set2.incl(new Tweet("b", "b body", 20))
+  val c = new Tweet("c", "c body", 14)
+  val d = new Tweet("d", "d body", 9)
   val set4c = set3.incl(c)
   val set4d = set3.incl(d)
   val set5 = set4c.incl(d)
@@ -246,9 +241,6 @@ object Main extends App {
   }
 
   def size(set: TweetSet): Int = asSet(set).size
-
-  //println("set: " + asSet(set5))
-  println(set5.mostRetweeted)
-  // Print the trending tweets
-  // GoogleVsApple.trending foreach println
+  val x = TweetReader.allTweets
+  print(x)
 }
