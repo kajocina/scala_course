@@ -151,7 +151,11 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
     if (p(elem)) ((acc incl elem) union left.filter(p)) union right.filter(p)
     else acc
 
-  def union(that: TweetSet): TweetSet = ((left union right) union that) incl elem
+  def union(that: TweetSet): TweetSet = {
+    println("Foo")
+    ((left union right) union that) incl elem
+  }
+
   def isEmpty: Boolean = false
 
   /**
@@ -241,6 +245,6 @@ object Main extends App {
   }
 
   def size(set: TweetSet): Int = asSet(set).size
-  val x = TweetReader.allTweets
-  print(x)
+
+  println(set5 union set4c)
 }
