@@ -1,6 +1,7 @@
 package objsets
 
 import TweetReader._
+import objsets.GoogleVsApple.googleTweets
 
 /**
   * A class to represent tweets.
@@ -147,9 +148,12 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
   def filter(p: Tweet => Boolean): TweetSet = filterAcc(p,new Empty())
 
   def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet =
-
-    if (p(elem)) ((acc incl elem) union left.filter(p)) union right.filter(p)
-    else acc
+    if (p(elem)) {
+      (left.filter(p) union right.filter(p)) union (acc incl elem)
+    }
+    else {
+      (left.filterAcc(p,acc) union right.filterAcc(p,acc))
+    }
 
   def union(that: TweetSet): TweetSet = {
     left union (right union (that incl elem))
@@ -162,6 +166,7 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
     */
 
   def contains(x: Tweet): Boolean =
+
     if (x.text < elem.text) left.contains(x)
     else if (elem.text < x.text) right.contains(x)
     else true
@@ -225,4 +230,3 @@ object GoogleVsApple {
     */
   lazy val trending: TweetList = (googleTweets union appleTweets).descendingByRetweet
 }
-
