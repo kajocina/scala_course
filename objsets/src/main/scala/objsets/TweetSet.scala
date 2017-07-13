@@ -152,8 +152,7 @@ class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
     else acc
 
   def union(that: TweetSet): TweetSet = {
-    println("Foo")
-    ((left union right) union that) incl elem
+    left union (right union (that incl elem))
   }
 
   def isEmpty: Boolean = false
@@ -217,34 +216,13 @@ object GoogleVsApple {
   val google = List("android", "Android", "galaxy", "Galaxy", "nexus", "Nexus")
   val apple = List("ios", "iOS", "iphone", "iPhone", "ipad", "iPad")
 
-  lazy val googleTweets: TweetSet = ???
-  lazy val appleTweets: TweetSet = ???
+  lazy val googleTweets: TweetSet = TweetReader.allTweets.filter(tw => tw.text contains google)
+  lazy val appleTweets: TweetSet = TweetReader.allTweets.filter(tw => tw.text contains apple)
 
   /**
     * A list of all tweets mentioning a keyword from either apple or google,
     * sorted by the number of retweets.
     */
-  lazy val trending: TweetList = ???
+  lazy val trending: TweetList = (googleTweets union appleTweets).descendingByRetweet
 }
 
-object Main extends App {
-  val set1 = new Empty
-  val set2 = set1.incl(new Tweet("a", "a body", 20))
-  val set3 = set2.incl(new Tweet("b", "b body", 20))
-  val c = new Tweet("c", "c body", 14)
-  val d = new Tweet("d", "d body", 9)
-  val set4c = set3.incl(c)
-  val set4d = set3.incl(d)
-  val set5 = set4c.incl(d)
-
-
-  def asSet(tweets: TweetSet): Set[Tweet] = {
-    var res = Set[Tweet]()
-    tweets.foreach(res += _)
-    res
-  }
-
-  def size(set: TweetSet): Int = asSet(set).size
-
-  println(set5 union set4c)
-}
