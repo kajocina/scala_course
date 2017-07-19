@@ -31,6 +31,7 @@ object Huffman {
   
   def chars(tree: CodeTree): List[Char] = tree match {
     case Fork(left,right,chars,_) => chars
+    case Leaf(char,_) => List(char)
   }
   
   def makeCodeTree(left: CodeTree, right: CodeTree) =
@@ -90,7 +91,7 @@ object Huffman {
   /**
    * Checks whether the list `trees` contains only one single code tree.
    */
-    def singleton(trees: List[CodeTree]): Boolean = ???
+    def singleton(trees: List[CodeTree]): Boolean = trees.length == 1
   
   /**
    * The parameter `trees` of this function is a list of code trees ordered
@@ -104,7 +105,15 @@ object Huffman {
    * If `trees` is a list of less than two elements, that list should be returned
    * unchanged.
    */
-    def combine(trees: List[CodeTree]): List[CodeTree] = ???
+    def combine(trees: List[CodeTree]): List[CodeTree] = {
+      if (singleton(trees)) trees
+      else {
+        println(trees)
+        val newFork: Fork = Fork(trees(0),trees(1),List(chars(trees(0)),chars(trees(1))).flatten, weight(trees(0)) + weight(trees(1)))
+
+        List(newFork,trees.drop(2))
+      }
+    }
   
   /**
    * This function will be called in the following way:
@@ -208,6 +217,6 @@ object Huffman {
   }
 
 object main extends App {
-  val charList: List[Char] = List('a','b','c','a')
-  println(Huffman.makeOrderedLeafList(Huffman.times(charList)))
+  val leaflist = List(Huffman.Leaf('e', 1), Huffman.Leaf('t', 2), Huffman.Leaf('x', 4))
+  Huffman.combine(leaflist) == List(Huffman.Fork(Huffman.Leaf('e',1),Huffman.Leaf('t',2),List('e', 't'),3), Huffman.Leaf('x',4))
 }
