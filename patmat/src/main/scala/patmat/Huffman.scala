@@ -108,10 +108,8 @@ object Huffman {
     def combine(trees: List[CodeTree]): List[CodeTree] = {
       if (singleton(trees)) trees
       else {
-        println(trees)
         val newFork: Fork = Fork(trees(0),trees(1),List(chars(trees(0)),chars(trees(1))).flatten, weight(trees(0)) + weight(trees(1)))
-
-        List(newFork,trees.drop(2))
+        newFork :: trees.drop(2)
       }
     }
   
@@ -218,5 +216,5 @@ object Huffman {
 
 object main extends App {
   val leaflist = List(Huffman.Leaf('e', 1), Huffman.Leaf('t', 2), Huffman.Leaf('x', 4))
-  Huffman.combine(leaflist) == List(Huffman.Fork(Huffman.Leaf('e',1),Huffman.Leaf('t',2),List('e', 't'),3), Huffman.Leaf('x',4))
+  println(Huffman.combine(leaflist) == List(Huffman.Fork(Huffman.Leaf('e',1),Huffman.Leaf('t',2),List('e', 't'),3), Huffman.Leaf('x',4)))
 }
