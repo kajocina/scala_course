@@ -200,17 +200,22 @@ object Huffman {
     def encode(tree: CodeTree)(text: List[Char]): List[Bit] = {
 
       val collector: List[Bit] = List()
+      val zero: Bit = 0
+      val one: Bit = 1
 
-      def searchChar(tree: CodeTree, char: Char): List[Bit] = tree match {
-
+      def getToLeaf(tree: CodeTree, searched_char: Char): List[Bit] = tree match {
+        case Leaf(char,_) if char == searched_char => List()
+        case Fork(left,right,_,_) => (left, right) match {
+          case (Fork(lleft,lright,subleft,_),Fork(rleft,rright,subright,_)) => if (subleft.contains(searched_char)) {
+            zero :: getToLeaf(left, searched_char)
+          }
+          else {one :: getToLeaf(right,searched_char)
+          }
+        }
       }
 
-
-
-
-      for (char <- text) {
-        searchChar(tree,char) :: collector
-      }
+      // here iterate over text and append sublists of bits to collector
+      text.foreach(getToLeaf(tree,_) :: collector)
       collector
     }
   
