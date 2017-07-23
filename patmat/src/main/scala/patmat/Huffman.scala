@@ -1,6 +1,7 @@
 package patmat
 
 import common._
+import patmat.Huffman.{Fork, Leaf}
 
 /**
  * Assignment 4: Huffman coding
@@ -157,7 +158,6 @@ object Huffman {
   def decode(tree: CodeTree, bits: List[Bit]): List[Char] = {
 
     val originalTree: CodeTree = tree
-
     def diveTree(tree: CodeTree, bits: List[Bit]): List[Char] =
 
       tree match {
@@ -165,7 +165,7 @@ object Huffman {
         case Fork(_, right, _, _) if bits.nonEmpty && bits.head == 1 => diveTree(right, bits.tail)
         case Fork(_, _, _, _) if bits.isEmpty => List()
         case Leaf(char, _) if bits.isEmpty => List(char)
-        case Leaf(char, _) if bits.tail.nonEmpty => char :: diveTree(originalTree, bits)
+        case Leaf(char, _) => char :: diveTree(originalTree, bits)
       }
 
     diveTree(tree, bits)
@@ -199,23 +199,48 @@ object Huffman {
    */
     def encode(tree: CodeTree)(text: List[Char]): List[Bit] = {
 
-      val collector: List[Bit] = List()
+      var collector: List[Bit] = List()
       val zero: Bit = 0
       val one: Bit = 1
 
       def getToLeaf(tree: CodeTree, searched_char: Char): List[Bit] = tree match {
-        case Leaf(char,_) if char == searched_char => List()
+        case Leaf(char,_) if char == searched_char => {
+          List()
+        }
         case Fork(left,right,_,_) => (left, right) match {
-          case (Fork(lleft,lright,subleft,_),Fork(rleft,rright,subright,_)) => if (subleft.contains(searched_char)) {
+          case (Fork(_,_,subleft,_),Fork(_,_,subright,_)) => if (subleft.contains(searched_char)) {
             zero :: getToLeaf(left, searched_char)
           }
-          else {one :: getToLeaf(right,searched_char)
+          else {
+            one :: getToLeaf(right,searched_char)
+          }
+          case (Leaf(char,_),Fork(_,_,chars,_)) => if (chars.contains(searched_char)) {
+            one :: getToLeaf(right,searched_char)
+          } else {
+            {
+              List(zero)
+            }
+          }
+          case (Fork(_,_,chars,_),Leaf(_,_)) => if (chars.contains(searched_char)) {
+            zero :: getToLeaf(left,searched_char)
+          } else {
+            {
+              List(one)
+            }
+          }
+          case (Leaf(lchar,_),Leaf(rchar,_)) => {
+            if (lchar == searched_char) {
+              List(zero)
+            }
+            else {
+              List(one)
+            }
           }
         }
       }
-
-      // here iterate over text and append sublists of bits to collector
-      text.foreach(getToLeaf(tree,_) :: collector)
+      for (char <- text) {
+        collector = collector ::: getToLeaf(tree,char)
+      }
       collector
     }
   
@@ -256,5 +281,8 @@ object Huffman {
   }
 
 object main extends App {
-  println(Huffman.encode(Huffman.frenchCode)(List('a','b','c')))
+  val t1 = Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5)
+
+  //println(Huffman.encode(Huffman.frenchCode)(List('a','b','c')))
+  println(Huffman.encode(t1)(List('a','b')))
 }
