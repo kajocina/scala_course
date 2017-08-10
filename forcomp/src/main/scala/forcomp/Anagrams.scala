@@ -99,7 +99,7 @@ object Anagrams {
              j <- (0 until occurrences(i)._2).toList
         } yield occurrences.updated(i, (occurrences(i)._1, occurrences(i)._2 - j)).toSet.subsets().map(_.toList)
       }
-      iterateCombos(occurrences).flatMap(_.toList).distinct
+      iterateCombos(occurrences).flatMap(_.toList).distinct.map(x => iterateCombos(x)).flatMap(_.toList).flatten.distinct
     }
   }
 
@@ -113,7 +113,9 @@ object Anagrams {
    *  Note: the resulting value is an occurrence - meaning it is sorted
    *  and has no zero-entries.
    */
-  def subtract(x: Occurrences, y: Occurrences): Occurrences = ???
+  def subtract(x: Occurrences, y: Occurrences): Occurrences = {
+    (x.toSet &~ y.toSet).toList
+  }
 
   /** Returns a list of all anagram sentences of the given sentence.
    *
@@ -155,5 +157,10 @@ object Anagrams {
    *
    *  Note: There is only one anagram of an empty sentence.
    */
-  def sentenceAnagrams(sentence: Sentence): List[Sentence] = ???
+  def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
+    if (sentence == List()) {return List(List())}
+    val sentenceOccurCombos: List[List[(Char, Int)]] = combinations(sentenceOccurrences(sentence))
+
+    dictionaryByOccurrences(occurrences) //checks if it's in the dict
+  }
 }

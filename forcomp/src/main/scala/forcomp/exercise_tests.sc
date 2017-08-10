@@ -11,27 +11,21 @@ def sentenceOccurrences(s: Sentence): Occurrences = {
   s.flatMap(x => wordOccurrences(x)).groupBy(_._1).mapValues(x => x.map(y => y._2)).mapValues(x => x.sum).toList.sortBy(_._1)
 }
 
-
-val foo: Occurrences = sentenceOccurrences(List("cccbbb"))
-val abbacomb = List(
-  List(),
-  List(('a', 1)),
-  List(('a', 2)),
-  List(('b', 1)),
-  List(('a', 1), ('b', 1)),
-  List(('a', 2), ('b', 1)),
-  List(('b', 2)),
-  List(('a', 1), ('b', 2)),
-  List(('a', 2)))
-
 def combinations(occurrences: Occurrences):  List[List[(Char, Int)]] = {
-  if (occurrences == List()) {return List(List())}
-  def iterateCombos(occurrences: Occurrences): List[Iterator[List[(Char, Int)]]] = {
-    for {i <- occurrences.indices.toList
-         j <- (1 until occurrences(i)._2).toList
-    } yield occurrences.updated(i, (occurrences(i)._1, occurrences(i)._2 - j)).toSet.subsets().map(_.toList)
+  if (occurrences == List()) {List(List())}
+  else {
+    def iterateCombos(occurrences: Occurrences): List[Iterator[List[(Char, Int)]]] = {
+      for {i <- occurrences.indices.toList
+           j <- (0 until occurrences(i)._2).toList
+      } yield occurrences.updated(i, (occurrences(i)._1, occurrences(i)._2 - j)).toSet.subsets().map(_.toList)
+    }
+    iterateCombos(occurrences).flatMap(_.toList).distinct.map(x => iterateCombos(x)).flatMap(_.toList).flatten.distinct.filter(_ != occurrences)
   }
-  iterateCombos(occurrences).flatMap(_.toList).distinct.map(_.sorted)
 }
-combinations(foo).toSet
-abbacomb.toSet
+
+val foo = List("Yes","man")
+def sentenceAnagrams(sentence: Sentence): List[List[Word]] = {
+
+}
+
+sentenceAnagrams(List("Yes", "man"))
