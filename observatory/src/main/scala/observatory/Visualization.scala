@@ -44,7 +44,7 @@ object Visualization {
       if(dist <= 1){return math.round(temp)}
     }
 
-    val power: Double = 2.0
+    val power: Double = 6.0
     val sum_divided: Double = distance_temps.map {case (dist,temp) => temp/math.pow(dist,power) }.sum
     val denominator: Double = distance_temps.map {case (dist, _) => 1/math.pow(dist,power)}.sum
     sum_divided / denominator
@@ -116,11 +116,24 @@ object Visualization {
     val colors_array_positions_sorted: Array[(Int,Color)] = colors_array_positions.toArray.sortBy(_._1) // increasing order
 
     val emptyPixel = Pixel(255,255,255,255)
-
     val position_array = Array.fill(64800+360){emptyPixel}
+
+    // fill-out what is known
     for(position <- colors_array_positions_sorted){
       position_array(position._1) = Pixel(position._2.red,position._2.green,position._2.blue,100)
     }
+
+    // fill-out predictions
+    var i = 0
+    while(i < position_array.length){
+        if(position_array(i) == emptyPixel){
+          val predicted_temp: Temperature = predictTemperature(temperatures,array_to_gps(i,180,360))
+          val interpolated_color: Color = interpolateColor(colors,predicted_temp)
+          position_array(i) = Pixel(interpolated_color.red,interpolated_color.green,interpolated_color.blue,100)
+        }
+      i += 1
+    }
+
     val image = Image(360,181,position_array)
       image.output(new java.io.File("/home/kaj/test.png"))
     image
